@@ -13,7 +13,7 @@ recipeControllers.controller('ListCtrl', ['$scope', '$http',
 
 recipeControllers.controller('DetailCtrl', ['$scope', '$http','$routeParams',
   function($scope, $http, $routeParams) {
-    $http.get('api/det/'+$routeParams.recipeId).success(function(data) {
+    $http.get('api/det/a?var='+$routeParams.recipeId).success(function(data) {
       $scope.items = data;
       console.log(data);
     });

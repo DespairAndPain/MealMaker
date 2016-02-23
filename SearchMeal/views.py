@@ -16,7 +16,7 @@ class VariationsList(generics.ListAPIView):
         queryset = Variations.objects.all()
         var = self.request.query_params.get('var', None)
         if var is not None:
-            queryset = queryset.filter(id)
+            queryset = queryset.filter(variation_fk__variation_id=var)
         return queryset
 
 

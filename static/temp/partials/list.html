@@ -4,10 +4,14 @@
     </div>
 </div>
 <div class="container">
-    <input type="text" ng-model="filterText" class="form-control" placeholder="Введите название">
-    <div>
+    <div class="row">
+        <div class="col-md-6">
+            <input type="text" ng-model="filterText" class="form-control" placeholder="Введите название">
+        </div>
+    </div>
+    <div >
         <div ng-repeat="item in items | filter:filterText">
-            <a href="/#/detail/{{ item.var_var_id }}">{{ item.rec_rec.recipe_name }}</a>
+            <h2><a href="/#/detail/{{ item.var_var_id }}">{{ item.rec_rec.recipe_name }}</a></h2>
         </div>
 
     </div>
