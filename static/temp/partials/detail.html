@@ -1,1 +1,7 @@
 Detail
+
+<div class="container">
+    <div ng-repeat="item in items | filter:filterText">
+            <h1 >{{ item.ingredients_fk.ingredient_name }}</h1>
+    </div>
+</div>

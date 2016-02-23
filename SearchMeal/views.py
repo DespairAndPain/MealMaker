@@ -16,7 +16,7 @@ class VariationsList(generics.ListAPIView):
         queryset = Variations.objects.all()
         var = self.request.query_params.get('var', None)
         if var is not None:
-            queryset = queryset.filter(variation_fk__recipeingredients=var)
+            queryset = queryset.filter(id)
         return queryset
 
 
