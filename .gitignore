@@ -22,7 +22,6 @@ parts/
 sdist/
 var/
 static_root/
-static/
 *.egg-info/
 .installed.cfg
 *.egg
