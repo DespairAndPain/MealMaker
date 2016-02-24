@@ -12,6 +12,7 @@ class ViewsList(generics.ListAPIView):
 class VariationsList(generics.ListAPIView):
     serializer_class = VariationsSerializer
 
+    # Параметры из url для поиска по ключю variation_id в Variation через Variations
     def get_queryset(self):
         queryset = Variations.objects.all()
         var = self.request.query_params.get('var', None)

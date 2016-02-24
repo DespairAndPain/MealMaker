@@ -75,12 +75,8 @@ WSGI_APPLICATION = 'MealMaker.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.postgresql_psycopg2',
-        'NAME': 'postdb',
-        'USER': 'postuser',
-        'PASSWORD': 'superpassword',
-        'HOST': 'localhost',
-        'PORT': '',
+        'ENGINE': 'django.db.backends.sqlite3',
+        'NAME': 'mydatabase',
     }
 }
 

@@ -10,10 +10,12 @@ recipeApp.config(['$routeProvider',
   function($routeProvider) {
     $routeProvider.
       when('/', {
+        // отображение всех рецептов
         templateUrl: 'static/temp/partials/list.html',
         controller: 'ListCtrl'
       }).
       when('/detail/:recipeId', {
+        // По нажатию на рицепт показываются ингредиенты
         templateUrl: 'static/temp/partials/detail.html',
         controller: 'DetailCtrl'
       }).otherwise({

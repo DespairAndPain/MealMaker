@@ -13,6 +13,7 @@ recipeControllers.controller('ListCtrl', ['$scope', '$http',
 
 recipeControllers.controller('DetailCtrl', ['$scope', '$http','$routeParams',
   function($scope, $http, $routeParams) {
+    // Подстановка параметров для отображения игнредиентов каждого блюда
     $http.get('api/det/a?var='+$routeParams.recipeId).success(function(data) {
       $scope.items = data;
       console.log(data);
